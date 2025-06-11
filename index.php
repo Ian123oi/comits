@@ -3,24 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criptografia legal</title>
+    <title>Criptonumeros...</title>
+    <style>
+        body {
+        background-color: lightblue;
+        }
+    </style>
 </head>
 <body>
     
+            <h1> cifra informático </h1>
+
     <form action="mensagem.php" method="POST">
 
     <label> Digite sua mensagem: </label> <br>
     <input type="textarea" name="mensagem"> </input><br> <br>
-    <input type="submit">
+    <input type="submit" value="Cifrar!">
 
 </form>
 
 <br> <br>
 
-    <form action="descrip.php" method="POST">
+    <form action="decodifica.php" method="POST">
         <label> Digite a mensagem a ser descriptografada: </label> <br>
-        <textarea name="mensagem"></textarea> <br> <br>
-        <input type="submit">
+        <input type="textarea" name="texto" ></input> <br> <br>
+        <input type="submit" value="Decodificar!">
+
+        </form>
+
+
 
 </body>
 </html>

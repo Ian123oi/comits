@@ -15,30 +15,36 @@
     $i = 0;
     $a = 1;
     $oi = "";
-    
+    $oi2 = 0;
+    $teste = array();
     $array2 = array();
     foreach($array as $alo) {
 
+        $teste[$i] = ord($array[$i]);
         if ($a<count($array)) {
         $array2[$i] =  ord($array[$i]) + ord($array[$a]); 
         }
         else {
-            $array2[$i] = ord($array[$i]) + ord($array[0]);
+            $alo5 = ord($array[$i]);
+            $array2[$i] = ord($array[$i]) +$array2[0];
+            
         }
-        echo ($array2[$i]);
         echo " ";
         
         
-        $oi = $oi . ".". strval($array2[$i]); 
+        $oi = $oi . ".". strval($array2[$i]);
         $i++;
         $a++;
-    } echo "<br>";
-    echo $oi;
+    } echo "MENSAGEM CRIPTOGRAFADA: <b> ";
+    echo $oi."</b>";
+    
+echo "<br>";
+   
 
     ?>
 
     <form action="decodifica.php" method="POST">
     <input type="hidden" name="texto" value="<?php echo($oi)?>">
-    <input type="submit" name="sumit">
+    <input type="submit" name="sumit" value="Decodificar"></form>
 </body>
 </html>
