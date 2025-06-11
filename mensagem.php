@@ -14,16 +14,31 @@
     $array = str_split($mensagem);
     $i = 0;
     $a = 1;
+    $oi = "";
+    
     $array2 = array();
     foreach($array as $alo) {
 
-        $array2[$i] =  ord($array[$i]) + $array[$a];
+        if ($a<count($array)) {
+        $array2[$i] =  ord($array[$i]) + ord($array[$a]); 
+        }
+        else {
+            $array2[$i] = ord($array[$i]) + ord($array[0]);
+        }
         echo ($array2[$i]);
         echo " ";
+        
+        
+        $oi = $oi . ".". strval($array2[$i]); 
         $i++;
         $a++;
-    }
+    } echo "<br>";
+    echo $oi;
 
     ?>
+
+    <form action="decodifica.php" method="POST">
+    <input type="hidden" name="texto" value="<?php echo($oi)?>">
+    <input type="submit" name="sumit">
 </body>
 </html>
